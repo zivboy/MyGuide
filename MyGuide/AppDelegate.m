@@ -55,6 +55,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+   // [self setupNavController];
     [self setupViewControllers];
     [self.window setRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
@@ -166,7 +167,7 @@
     NSDictionary *textAttributes = nil;
     
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
-        backgroundImage = [UIImage imageNamed:@"navigationbar_background_tall"];
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background_tall_green"];
         
         textAttributes = @{
                            NSFontAttributeName: [UIFont boldSystemFontOfSize:18],
@@ -174,7 +175,7 @@
                            };
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-        backgroundImage = [UIImage imageNamed:@"navigationbar_background"];
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background_green"];
         
         textAttributes = @{
                            UITextAttributeFont: [UIFont boldSystemFontOfSize:18],
